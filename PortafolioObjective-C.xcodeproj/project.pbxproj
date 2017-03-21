@@ -15,6 +15,7 @@
 		67BA31C71E7C3C3600AFB26A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67BA31C51E7C3C3600AFB26A /* LaunchScreen.storyboard */; };
 		67BA31D21E7C3C3700AFB26A /* PortafolioObjective_CTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BA31D11E7C3C3700AFB26A /* PortafolioObjective_CTests.m */; };
 		67BA31DD1E7C3C3700AFB26A /* PortafolioObjective_CUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BA31DC1E7C3C3700AFB26A /* PortafolioObjective_CUITests.m */; };
+		67BA31EC1E7C43D700AFB26A /* HypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BA31EB1E7C43D700AFB26A /* HypnosisView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		67BA31D81E7C3C3700AFB26A /* PortafolioObjective-CUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PortafolioObjective-CUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67BA31DC1E7C3C3700AFB26A /* PortafolioObjective_CUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PortafolioObjective_CUITests.m; sourceTree = "<group>"; };
 		67BA31DE1E7C3C3700AFB26A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67BA31EA1E7C43D700AFB26A /* HypnosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HypnosisView.h; sourceTree = "<group>"; };
+		67BA31EB1E7C43D700AFB26A /* HypnosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HypnosisView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				67BA31BB1E7C3C3600AFB26A /* AppDelegate.m */,
 				67BA31BD1E7C3C3600AFB26A /* ViewController.h */,
 				67BA31BE1E7C3C3600AFB26A /* ViewController.m */,
+				67BA31EA1E7C43D700AFB26A /* HypnosisView.h */,
+				67BA31EB1E7C43D700AFB26A /* HypnosisView.m */,
 				67BA31C01E7C3C3600AFB26A /* Main.storyboard */,
 				67BA31C31E7C3C3600AFB26A /* Assets.xcassets */,
 				67BA31C51E7C3C3600AFB26A /* LaunchScreen.storyboard */,
@@ -277,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67BA31BF1E7C3C3600AFB26A /* ViewController.m in Sources */,
+				67BA31EC1E7C43D700AFB26A /* HypnosisView.m in Sources */,
 				67BA31BC1E7C3C3600AFB26A /* AppDelegate.m in Sources */,
 				67BA31B91E7C3C3600AFB26A /* main.m in Sources */,
 			);
@@ -514,6 +520,7 @@
 				67BA31E31E7C3C3700AFB26A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		67BA31E41E7C3C3700AFB26A /* Build configuration list for PBXNativeTarget "PortafolioObjective-CTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +529,7 @@
 				67BA31E61E7C3C3700AFB26A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		67BA31E71E7C3C3700AFB26A /* Build configuration list for PBXNativeTarget "PortafolioObjective-CUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +538,7 @@
 				67BA31E91E7C3C3700AFB26A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
