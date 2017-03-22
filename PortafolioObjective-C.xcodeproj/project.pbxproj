@@ -16,6 +16,8 @@
 		67BA31D21E7C3C3700AFB26A /* PortafolioObjective_CTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BA31D11E7C3C3700AFB26A /* PortafolioObjective_CTests.m */; };
 		67BA31DD1E7C3C3700AFB26A /* PortafolioObjective_CUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BA31DC1E7C3C3700AFB26A /* PortafolioObjective_CUITests.m */; };
 		67BA31EC1E7C43D700AFB26A /* HypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BA31EB1E7C43D700AFB26A /* HypnosisView.m */; };
+		67BA31EF1E82460100AFB26A /* ReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BA31EE1E82460100AFB26A /* ReminderViewController.m */; };
+		67BA31F41E82492500AFB26A /* ReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67BA31F31E82492500AFB26A /* ReminderViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		67BA31B41E7C3C3500AFB26A /* PortafolioObjective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PortafolioObjective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		67BA31B41E7C3C3500AFB26A /* HypnoNerd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HypnoNerd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67BA31B81E7C3C3600AFB26A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		67BA31BA1E7C3C3600AFB26A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		67BA31BB1E7C3C3600AFB26A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,6 +56,9 @@
 		67BA31DE1E7C3C3700AFB26A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67BA31EA1E7C43D700AFB26A /* HypnosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HypnosisView.h; sourceTree = "<group>"; };
 		67BA31EB1E7C43D700AFB26A /* HypnosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HypnosisView.m; sourceTree = "<group>"; };
+		67BA31ED1E82460100AFB26A /* ReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderViewController.h; sourceTree = "<group>"; };
+		67BA31EE1E82460100AFB26A /* ReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderViewController.m; sourceTree = "<group>"; };
+		67BA31F31E82492500AFB26A /* ReminderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReminderViewController.xib; path = ../ReminderViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +99,7 @@
 		67BA31B51E7C3C3500AFB26A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				67BA31B41E7C3C3500AFB26A /* PortafolioObjective-C.app */,
+				67BA31B41E7C3C3500AFB26A /* HypnoNerd.app */,
 				67BA31CD1E7C3C3700AFB26A /* PortafolioObjective-CTests.xctest */,
 				67BA31D81E7C3C3700AFB26A /* PortafolioObjective-CUITests.xctest */,
 			);
@@ -110,6 +115,9 @@
 				67BA31BE1E7C3C3600AFB26A /* ViewController.m */,
 				67BA31EA1E7C43D700AFB26A /* HypnosisView.h */,
 				67BA31EB1E7C43D700AFB26A /* HypnosisView.m */,
+				67BA31ED1E82460100AFB26A /* ReminderViewController.h */,
+				67BA31EE1E82460100AFB26A /* ReminderViewController.m */,
+				67BA31F31E82492500AFB26A /* ReminderViewController.xib */,
 				67BA31C01E7C3C3600AFB26A /* Main.storyboard */,
 				67BA31C31E7C3C3600AFB26A /* Assets.xcassets */,
 				67BA31C51E7C3C3600AFB26A /* LaunchScreen.storyboard */,
@@ -162,7 +170,7 @@
 			);
 			name = "PortafolioObjective-C";
 			productName = "PortafolioObjective-C";
-			productReference = 67BA31B41E7C3C3500AFB26A /* PortafolioObjective-C.app */;
+			productReference = 67BA31B41E7C3C3500AFB26A /* HypnoNerd.app */;
 			productType = "com.apple.product-type.application";
 		};
 		67BA31CC1E7C3C3700AFB26A /* PortafolioObjective-CTests */ = {
@@ -254,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67BA31F41E82492500AFB26A /* ReminderViewController.xib in Resources */,
 				67BA31C71E7C3C3600AFB26A /* LaunchScreen.storyboard in Resources */,
 				67BA31C41E7C3C3600AFB26A /* Assets.xcassets in Resources */,
 				67BA31C21E7C3C3600AFB26A /* Main.storyboard in Resources */,
@@ -285,6 +294,7 @@
 				67BA31EC1E7C43D700AFB26A /* HypnosisView.m in Sources */,
 				67BA31BC1E7C3C3600AFB26A /* AppDelegate.m in Sources */,
 				67BA31B91E7C3C3600AFB26A /* main.m in Sources */,
+				67BA31EF1E82460100AFB26A /* ReminderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,8 +444,8 @@
 				DEVELOPMENT_TEAM = ASZWA7K44P;
 				INFOPLIST_FILE = "PortafolioObjective-C/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ipenam.PortafolioObjective-C";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ipenam.HypnoNerd;
+				PRODUCT_NAME = HypnoNerd;
 			};
 			name = Debug;
 		};
@@ -446,8 +456,8 @@
 				DEVELOPMENT_TEAM = ASZWA7K44P;
 				INFOPLIST_FILE = "PortafolioObjective-C/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ipenam.PortafolioObjective-C";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ipenam.HypnoNerd;
+				PRODUCT_NAME = HypnoNerd;
 			};
 			name = Release;
 		};

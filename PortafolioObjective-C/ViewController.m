@@ -9,42 +9,49 @@
 #import "ViewController.h"
 #import "HypnosisView.h"
 
-@interface ViewController ()
+@interface ViewController () <UITextFieldDelegate>
 
 @end
 
 @implementation ViewController
 
 -(void)loadView{
-    UIView  *view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.view = view;
-    self.view.backgroundColor = [UIColor whiteColor];
     
-    /*
-    CGRect firstFrame = self.view.bounds;
-    HypnosisView *firstView = [[HypnosisView alloc] initWithFrame:firstFrame];
-    [self.view addSubview:firstView];
-     */
+    //Crear una vista
+    HypnosisView *backgroundView = [[HypnosisView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    CGRect screenRect   = self.view.bounds;
-    CGRect bigRect      = screenRect;
+    CGRect textFieldRect = CGRectMake(40, 70, 240, 30);
+    UITextField *textField = [[UITextField alloc] initWithFrame:textFieldRect];
     
-    bigRect.size.width  *= 2.0;
-    bigRect.size.height *= 1.0;
+    textField.borderStyle = UITextBorderStyleRoundedRect;
+    textField.placeholder = @"Hypnotizame";
+    textField.returnKeyType = UIReturnKeyDone;
+    textField.delegate = self;
     
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:screenRect];
-    scrollView.pagingEnabled = YES;
-    [self.view addSubview:scrollView];
+    [backgroundView addSubview:textField];
     
-    HypnosisView *hypnosisView = [[HypnosisView alloc] initWithFrame:screenRect];
-    [scrollView addSubview:hypnosisView];
+    //Definir backgroundView como la vista del controllador
+    self.view = backgroundView;
     
-    screenRect.origin.x += screenRect.size.width;
-    HypnosisView *hypnosisView2 = [[HypnosisView alloc] initWithFrame:screenRect];
-    [scrollView addSubview:hypnosisView2];
+}
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil
+                         bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil
+                           bundle:nibBundleOrNil];
     
-    scrollView.contentSize = bigRect.size;
+    if (self) {
     
+        // Set the tab bar item's title
+        self.tabBarItem.title = @"Hypnotize";
+        // Create a UIImage from a file
+        // This will use Hypno@2x.png on retina display devices
+        UIImage *i = [UIImage imageNamed:@"Hypno.png"];
+        // Put that image on the tab bar item
+        self.tabBarItem.image = i;
+    }
+    return self;
 }
 
 - (void)viewDidLoad {
@@ -56,6 +63,52 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self drawHypnoticMessage:textField.text];
+    textField.text = @"";
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void)drawHypnoticMessage:(NSString *)message
+{
+    for (int i = 0; i < 20; i++) {
+        UILabel *messageLabel = [[UILabel alloc] init];
+        
+        messageLabel.backgroundColor = [UIColor clearColor];
+        messageLabel.textColor = [UIColor blackColor];
+        messageLabel.text = message;
+        
+        [messageLabel sizeToFit];
+        
+        int width = (int)(self.view.bounds.size.width - messageLabel.bounds.size.width);
+        int x = arc4random() % width;
+        
+        int height = (int)(self.view.bounds.size.height - messageLabel.bounds.size.height);
+        int y = arc4random() % height;
+        
+        CGRect frame = messageLabel.frame;
+        frame.origin = CGPointMake(x, y);
+        messageLabel.frame = frame;
+        
+        [self.view addSubview:messageLabel];
+        
+        UIInterpolatingMotionEffect *motionEffect;
+        motionEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x"
+                                                                       type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+        motionEffect.minimumRelativeValue = @(-25);
+        motionEffect.maximumRelativeValue = @(25);
+        [messageLabel addMotionEffect:motionEffect];
+        
+        motionEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y"
+                                                                       type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+        motionEffect.minimumRelativeValue = @(-25);
+        motionEffect.maximumRelativeValue = @(25);
+        [messageLabel addMotionEffect:motionEffect];
+    }
 }
 
 

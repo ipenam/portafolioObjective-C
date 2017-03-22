@@ -8,28 +8,49 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "ReminderViewController.h"
+
+@import UserNotifications;
 
 @interface AppDelegate ()
-
-@property (nonatomic,strong) ViewController *viewController;
 
 @end
 
 @implementation AppDelegate
 
-@synthesize viewController;
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.viewController = [[ViewController alloc] init];
-    //UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
-    //navController.navigationBarHidden = YES;
     
-    self.window.rootViewController = self.viewController;//navController;
+    NSBundle *bundle = [NSBundle mainBundle];
+    
+    ViewController *hvc = [[ViewController alloc] init];
+    
+    ReminderViewController *rvc = [[ReminderViewController alloc] init];
+                                   //initWithNibName:@"ReminderViewController"
+                                   //bundle:bundle];
+    
+    UITabBarController *tabBar = [[UITabBarController alloc] init];
+    tabBar.viewControllers = @[hvc,rvc];
+    
+    self.window.rootViewController = tabBar;
+    self.window.backgroundColor = [UIColor whiteColor];
+    
     [self.window makeKeyAndVisible];
+    
+    //Notification
+    UNAuthorizationOptions options = UNAuthorizationOptionAlert + UNAuthorizationOptionSound;
+    
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    
+    [center requestAuthorizationWithOptions:options
+                          completionHandler:^(BOOL granted, NSError * _Nullable error) {
+                              if (!granted) {
+                                  NSLog(@"Something went wrong");
+                              }
+                          }];
+    
     return YES;
 }
 
