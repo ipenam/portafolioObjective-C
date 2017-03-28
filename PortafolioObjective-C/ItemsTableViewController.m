@@ -10,6 +10,8 @@
 #import "ItemStore.h"
 #import "Item.h"
 
+#import "DetailViewController.h"
+
 @interface ItemsTableViewController ()
 
 @property (nonatomic, strong) IBOutlet UIView *headerView;
@@ -23,6 +25,15 @@
     // Call the superclass's designated initializer
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
+        
+        UINavigationItem *navItem = self.navigationItem;
+        navItem.title = @"Homepwner";
+        
+        UIBarButtonItem *barItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                                 target:self
+                                                                                 action:@selector(addNewItem:)];
+        navItem.rightBarButtonItem = barItem;
+        navItem.leftBarButtonItem = self.editButtonItem;
 
     }
     return self;
@@ -39,8 +50,14 @@
     [self.tableView registerClass:[UITableViewCell class]
            forCellReuseIdentifier:@"UITableViewCell"];
     
-    UIView *header = self.headerView;
-    [self.tableView setTableHeaderView:header];
+    //UIView *header = self.headerView;
+    //[self.tableView setTableHeaderView:header];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -97,6 +114,19 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
                                      toIndex:destinationIndexPath.row];
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    DetailViewController *detailViewController = [[DetailViewController alloc] init];
+    
+    NSArray *items = [[ItemStore sharedStore] allItems];
+    Item *selectedItem = [items objectAtIndex:indexPath.row];
+    
+    detailViewController.item = selectedItem;
+    
+    [self.navigationController pushViewController:detailViewController
+                                         animated:YES];
+}
+
 - (IBAction)addNewItem:(id)sender
 {
     
@@ -109,7 +139,7 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
                           withRowAnimation:UITableViewRowAnimationTop];
     
 }
-
+/*
 - (IBAction)toggleEditingMode:(id)sender
 {
     
@@ -139,6 +169,6 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
                                     options:nil] objectAtIndex:0];
     }
     return view;
-}
+}*/
 
 @end

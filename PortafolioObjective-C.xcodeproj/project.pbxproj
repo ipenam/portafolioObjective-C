@@ -11,6 +11,8 @@
 		675F67BC1E836C8F002912D8 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 675F67BB1E836C8F002912D8 /* Item.m */; };
 		675F67BF1E8371E1002912D8 /* ItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 675F67BE1E8371E1002912D8 /* ItemStore.m */; };
 		675F67C11E844D81002912D8 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 675F67C01E844D81002912D8 /* HeaderView.xib */; };
+		675F67C51E84B51B002912D8 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 675F67C31E84B51B002912D8 /* DetailViewController.m */; };
+		675F67C61E84B51B002912D8 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 675F67C41E84B51B002912D8 /* DetailViewController.xib */; };
 		67BA31B91E7C3C3600AFB26A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BA31B81E7C3C3600AFB26A /* main.m */; };
 		67BA31BC1E7C3C3600AFB26A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BA31BB1E7C3C3600AFB26A /* AppDelegate.m */; };
 		67BA31C21E7C3C3600AFB26A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67BA31C01E7C3C3600AFB26A /* Main.storyboard */; };
@@ -45,6 +47,9 @@
 		675F67BD1E8371E1002912D8 /* ItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemStore.h; sourceTree = "<group>"; };
 		675F67BE1E8371E1002912D8 /* ItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemStore.m; sourceTree = "<group>"; };
 		675F67C01E844D81002912D8 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		675F67C21E84B51B002912D8 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		675F67C31E84B51B002912D8 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		675F67C41E84B51B002912D8 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		67BA31B41E7C3C3500AFB26A /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67BA31B81E7C3C3600AFB26A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		67BA31BA1E7C3C3600AFB26A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -118,6 +123,9 @@
 				675F67BE1E8371E1002912D8 /* ItemStore.m */,
 				675F67BA1E836C8F002912D8 /* Item.h */,
 				675F67BB1E836C8F002912D8 /* Item.m */,
+				675F67C21E84B51B002912D8 /* DetailViewController.h */,
+				675F67C31E84B51B002912D8 /* DetailViewController.m */,
+				675F67C41E84B51B002912D8 /* DetailViewController.xib */,
 				67BA31C01E7C3C3600AFB26A /* Main.storyboard */,
 				67BA31C31E7C3C3600AFB26A /* Assets.xcassets */,
 				67BA31C51E7C3C3600AFB26A /* LaunchScreen.storyboard */,
@@ -264,6 +272,7 @@
 			files = (
 				67BA31C71E7C3C3600AFB26A /* LaunchScreen.storyboard in Resources */,
 				67BA31C41E7C3C3600AFB26A /* Assets.xcassets in Resources */,
+				675F67C61E84B51B002912D8 /* DetailViewController.xib in Resources */,
 				67BA31C21E7C3C3600AFB26A /* Main.storyboard in Resources */,
 				675F67C11E844D81002912D8 /* HeaderView.xib in Resources */,
 			);
@@ -295,6 +304,7 @@
 				67BA31BC1E7C3C3600AFB26A /* AppDelegate.m in Sources */,
 				675F67B91E83612E002912D8 /* ItemsTableViewController.m in Sources */,
 				67BA31B91E7C3C3600AFB26A /* main.m in Sources */,
+				675F67C51E84B51B002912D8 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +456,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ipenam.Homepwner;
 				PRODUCT_NAME = Homepwner;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -458,6 +469,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ipenam.Homepwner;
 				PRODUCT_NAME = Homepwner;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
